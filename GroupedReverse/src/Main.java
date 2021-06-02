@@ -14,7 +14,6 @@ class Main {
        // printReverse(mylist.getHead());
         mylist.reverseList();
         mylist.printList();
-        mylist.reverInRange(2,4);
     }
     public static void printReverse(Linkedlist.Node node){
         if(node == null){
@@ -48,29 +47,6 @@ class Linkedlist{
         }
         head = prev;
     }
-
-    public void reverseList(Node head,int limit){
-        Node current = head;
-        Node Next = null;
-        Node prev = null;
-        while(current!= null){
-            Next = current.next;
-            current.next = prev;
-            prev = current;
-            current = Next;
-        }
-        head = prev;
-    }
-
-    public void reverseInRange(int lower,int higher){
-        Node temp = this.head;
-        while(lower != 0){
-            temp = temp.next;
-            lower = lower-1;
-        }
-        reverseList(temp,higher);
-    }
-
     public void printList(){
         Node temp = head;
         while(temp != null){
