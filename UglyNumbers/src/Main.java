@@ -8,6 +8,7 @@ public class Main {
         int n = scanner.nextInt();
         scanner.nextLine();
         System.out.println("The nth ugly number is "+ugly(n));
+        scanner.close();
     }
     public static int ugly(int n){
         int count = 0;
