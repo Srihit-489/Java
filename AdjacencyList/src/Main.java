@@ -29,9 +29,13 @@ public class Main {
         d.addneghibor(a);
         d.addneghibor(h);
 
+
         h.addneghibor(d);
 
-        BFS.traverse(a);
+      //  BFS.traverse(a);
+
+        DFS mydfs = new DFS();
+        mydfs.dfs(a);
 
     }
 }
